@@ -4,14 +4,10 @@ import { useRecoilValue } from "recoil";
 import { colorCountState } from "../state/count";
 import { PanelArgs, RecoilColorState } from "../panel";
 
-const Manifest = ({ step, factor }: PanelArgs) => {
+const Manifest = () => {
   const colorCount = useRecoilValue(colorCountState);
 
-  return (
-    <>
-      {step}, {factor} arithmetic {colorCount}
-    </>
-  );
+  return <>{colorCount}</>;
 };
 
 export default Manifest;

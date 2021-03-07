@@ -13,7 +13,7 @@ function App() {
         <br />
         <Data step={4} factor={2} />
         <br />
-        <Manifest step={4} factor={2} />
+        <Manifest />
         <br />
       </div>
     </RecoilRoot>
