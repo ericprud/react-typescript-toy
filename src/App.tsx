@@ -1,25 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Schema from "./components/Schema";
+import Data from "./components/Data";
+import Manifest from "./components/Manifest";
+import { RecoilRoot } from "recoil";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <RecoilRoot>
+      <div className="App">
+        <Schema step={10} factor={-3} />
+        <br />
+        <Data step={4} factor={2} />
+        <br />
+        <Manifest step={4} factor={2} />
+        <br />
+      </div>
+    </RecoilRoot>
   );
 }
 
